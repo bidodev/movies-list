@@ -18,7 +18,7 @@ function displayDescr(event) {
     if(event.target == items[i]){
       let randomSource = "photo" + (i+1) + ".jpg";
       console.log(randomSource);
-      posterImg.style.backgroundImage = `url('../img/${randomSource}')`;
+      posterImg.style.backgroundImage = `url('./img/${randomSource}')`;
     }
     
   }
