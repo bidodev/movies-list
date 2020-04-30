@@ -47,7 +47,7 @@ body {
 .poster {
   width: 20vw;
   height: 50vh;
-  background-image: url(../img/Friends.jpg);
+  background-image: url(../img/1.Friends.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -69,6 +69,6 @@ body {
     opacity: 0;
 }
 .displayDescription{
-    opacity:0;
+    opacity:1;
 }
 
