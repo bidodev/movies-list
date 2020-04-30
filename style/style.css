@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #263f44;
+}
+.main-container {
+  width: 57vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.list-container {
+  width: 20vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  flex: 1;
+  list-style: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-box {
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+ 
+}
+.poster {
+  width: 20vw;
+  height: 50vh;
+  background-image: url(../img/Friends.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.description {
+  width: 40vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.description p{
+    width: 30vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.hideDescription{
+    opacity: 0;
+}
+.displayDescription{
+    opacity:0;
+}
+
