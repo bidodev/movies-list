@@ -44,17 +44,6 @@ const films = [
   },
   {
     id: 4,
-    title: "The Lord of the Rings",
-    release: 2001,
-    genre: "Fantasy/Adventure",
-    last: "",
-    actors: ["water", "flour", "salt", "yeast"],
-    description:
-      "A young hobbit, Frodo, who has found the One Ring that belongs to the Dark Lord Sauron, begins his journey with eight companions to Mount Doom, the only place where it can be destroyed.",
-    image: ["./img/photo5.jpg", "./img/ince1.png", "./img/ince2.jpg"],
-  },
-  {
-    id: 5,
     title: "Fight Club",
     release: 1999,
     genre: "Drama/Thriller",

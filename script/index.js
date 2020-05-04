@@ -22,7 +22,13 @@ const renderMenuList = movie => {
 
 //render movie
 function renderMovie(event) {
-  const movieId = event.target.id;
+  let movieId = 0;
+
+  if (event.type === "DOMContentLoaded") {
+    movieId = 1;
+  } else {
+    movieId = event.target.id;
+  }
 
   //destructing the object
   let { title, release, genre, last, description, image } = parsedMovies[
@@ -54,3 +60,4 @@ parsedMovies.forEach(renderMenuList);
 
 //HANDLER EVENTS
 elements.moviesList.addEventListener("click", renderMovie);
+document.addEventListener("DOMContentLoaded", renderMovie);
