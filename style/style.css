@@ -3,74 +3,89 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  color: #263f44;
-  cursor: default;
+  background-color: #e5e5e5;
 }
+
 .main-container {
+  margin: 0 auto;
   width: 57vw;
   height: 70vh;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
-.list-container {
+.movies__list {
   width: 20vw;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
+  height: auto;
 }
 
-.items {
-  flex: 1;
-  list-style: none;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.movies__item {
+  width: 15vw;
+  list-style-type: none;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  /* //border: 1px solid black; */
+  cursor: pointer;
 }
-
 .description-box {
   width: 40vw;
   height: 70vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
- 
 }
+
+.description-movie {
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #181818;
+}
+
+.sub-desc {
+  color: #7a2929;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #4d5156;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .poster {
   width: 20vw;
   height: 50vh;
-  background-image: url();
   background-size: cover;
   background-position: center;
-}
-.description {
-  width: 40vw;
-  height: 15vh;
-  display: flex;
-  justify-content: center;
-  
-}
-.description p{
-    width: 30vw;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-.hideDescription{
-    opacity: 0;
-}
-.displayDescription{
-    opacity:1;
+  /*  */
+  margin-bottom: 3rem;
 }
 
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-out;
+}
+
+.poster img:hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}

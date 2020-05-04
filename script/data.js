@@ -1,27 +1,48 @@
 const films = [
   {
-    id: 1,
-    title: "Sourdough",
+    id: 0,
+    title: "The Platform",
+    release: 2019,
+    genre: "Sci-fi/Horror",
+    last: "1h 34m",
     actors: ["water", "flour", "salt", "yeast"],
-    description: "",
-    image:
-      "https://amyinthekitchen.com/wp-content/uploads/2018/11/Beginners-Sourdough-Bread-AITK.jpg",
+    description:
+      "In the future, prisoners housed in vertical cells watch as inmates in the upper cells are fed while those below starve.",
+    image: "./img/photo1.jpg",
+  },
+  {
+    id: 1,
+    title: "Inception",
+    release: 2010,
+    genre: "Thriller/Sci-fi",
+    last: "2h 28m",
+    actors: ["water", "flour", "salt", "yeast"],
+    description:
+      "Cobb steals information from his targets by entering their dreams. He is wanted for his alleged role in his wife's murder and his only chance at redemption is to perform the impossible, an inception.",
+    image: "./img/photo2.jpg",
   },
   {
     id: 2,
-    title: "Baguettes",
+    title: "The Godfather",
+    release: 1972,
+    genre: "Crime",
+    last: "2h 58m",
     actors: ["water", "flour", "salt", "yeast"],
-    description: "",
-    image:
-      "https://www.thespruceeats.com/thmb/mCTU2pQ6A-WZ7qQqxH4C8gSbR9E=/1428x1428/smart/filters:no_upscale()/GettyImages-636741221-e5442b2f0b3a4d33a26ebf7deb237fed.jpg",
+    description:
+      "Don Vito Corleone, head of a mafia family, decides to handover his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+    image: "./img/photo3.jpg",
   },
+
   {
     id: 3,
-    title: "Sliced bread",
-    actors: ["water", "flour"],
-    description: "",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdfaG5Cv4oOjewDMyFitnCpsOBH3ifA5fkycKUy0_y_4Vv2P4IkA",
+    title: "The Dark Knight",
+    release: 2008,
+    genre: "Action/Adventure",
+    last: "2h 32m",
+    actors: ["water", "flour", "salt", "yeast"],
+    description:
+      "After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, a psychopathic criminal mastermind who wants to bring all the heroes down to his level.",
+    image: "./img/photo4.jpg",
   },
 ];
 
