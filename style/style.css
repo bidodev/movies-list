@@ -19,20 +19,28 @@ body {
   width: 57vw;
   height: 70vh;
   display: flex;
+  justify-content: space-between;
 }
 
 .movies__list {
-  width: 20vw;
+  flex-direction: column;
+  width: 10vw;
   height: auto;
 }
 
+.a {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  padding: 0 1rem;
+}
+
 .movies__item {
-  width: 15vw;
   list-style-type: none;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  /* //border: 1px solid black; */
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
+  padding: 0.5rem;
 }
 .description-box {
   width: 40vw;
@@ -88,4 +96,10 @@ body {
   object-fit: cover;
   filter: grayscale(0);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.fa-video {
+  font-size: 24px;
+  color: #7a2929;
+  margin-right: 1rem;
 }

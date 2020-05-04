@@ -13,7 +13,8 @@ const renderMenuList = movie => {
 
   //create the markUp
   const markUp = `
-    <li id="${id}" class="movies__item">${title}</li>
+  <div class="a">
+  <i class="fas fa-video"></i><li id="${id}" class="movies__item">${title}</li></div>
   `;
 
   elements.moviesList.insertAdjacentHTML("beforeend", markUp);

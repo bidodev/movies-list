@@ -44,6 +44,28 @@ const films = [
       "After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, a psychopathic criminal mastermind who wants to bring all the heroes down to his level.",
     image: "./img/photo4.jpg",
   },
+  {
+    id: 4,
+    title: "The Lord of the Rings",
+    release: 2001,
+    genre: "Fantasy/Adventure",
+    last: "",
+    actors: ["water", "flour", "salt", "yeast"],
+    description:
+      "A young hobbit, Frodo, who has found the One Ring that belongs to the Dark Lord Sauron, begins his journey with eight companions to Mount Doom, the only place where it can be destroyed.",
+    image: "./img/photo5.jpg",
+  },
+  {
+    id: 5,
+    title: "Fight Club",
+    release: 1999,
+    genre: "Drama/Thriller",
+    last: "2h 31m",
+    actors: ["water", "flour", "salt", "yeast"],
+    description:
+      "Discontented with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. The project soon spirals down into something sinister.",
+    image: "./img/photo6.jpg",
+  },
 ];
 
 let data = JSON.stringify(films);
