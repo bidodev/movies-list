@@ -53,10 +53,11 @@ h1 {
   color: #3d3e3f;
 }
 
-.fa-video {
-  font-size: 1.3rem;
+.fa-play {
+  font-size: 0.8rem;
   color: #7a2929;
   margin-right: 1rem;
+  pointer-events: none;
 }
 
 .description-box {

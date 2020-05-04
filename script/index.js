@@ -4,32 +4,39 @@ import { data as movies } from "./data.js";
 //import DOM elements
 import { elements } from "./base.js";
 
-//parse the JSON string again into a ARRAY of objects
+//parse the JSON string again into a array of objects
 const parsedMovies = JSON.parse(movies);
+//console.log(parsedMovies);
 
 //render the menu of films
-const renderMenuList = movie => {
+function renderMenuList(movie) {
   let { id, title } = movie;
+  //console.log(movie);
 
-  //create the markUp
+  //generate the HTML for the menu..
   const markUp = `
   <div class="element-box">
-  <i class="fas fa-video"></i><li id="${id}" class="movies__item">${title}</li></div>
-  `;
+  <i class="fas fa-play"></i>
+    <li id="${id}" class="movies__item">${title}</li>
+  </div>`;
 
+  //insert the HTMl inside the <div class=""description-box"></div>
   elements.moviesList.insertAdjacentHTML("beforeend", markUp);
-};
 
-//render movie
-function renderMovie(event) {
-  let movieId = 0;
+  //always renderize the first movie on the page load
+  renderMovie(0);
 
-  if (event.type === "DOMContentLoaded") {
-    movieId;
-  } else {
-    movieId = event.target.id;
+  //addEventListener
+  document.querySelectorAll(".movies__item").forEach(element => {
+    element.addEventListener("click", renderMovie);
+  });
+}
+
+//render a movie
+function renderMovie(movieId) {
+  if (movieId.type == "click") {
+    movieId = movieId.target.id;
   }
-
   //destructing the object
   let {
     title,
@@ -56,14 +63,11 @@ function renderMovie(event) {
       
       <div class="description">${description}</div>
     </div>`;
-
-  // ${description}
   elements.description.innerHTML = markUp;
 }
 
-//for each film call the function render film
-parsedMovies.forEach(renderMenuList);
-
 //HANDLER EVENTS
-elements.moviesList.addEventListener("click", renderMovie);
-document.addEventListener("DOMContentLoaded", renderMovie);
+document.addEventListener(
+  "DOMContentLoaded",
+  parsedMovies.forEach(renderMenuList)
+);
