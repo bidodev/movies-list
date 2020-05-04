@@ -13,7 +13,7 @@ const renderMenuList = movie => {
 
   //create the markUp
   const markUp = `
-  <div class="a">
+  <div class="element-box">
   <i class="fas fa-video"></i><li id="${id}" class="movies__item">${title}</li></div>
   `;
 
@@ -31,7 +31,7 @@ function renderMovie(event) {
 
   //create the markUp
   const markUp = `
-    <figure class="poster composition">
+    <figure class="composition">
       <img src="${image[0]}" alt="${title}" class="composition__photo composition__photo--p1">
       <img src="${image[1]}" alt="${title}" class="composition__photo composition__photo--p2">
       <img src="${image[2]}" alt="${title}" class="composition__photo composition__photo--p3">
