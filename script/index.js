@@ -25,22 +25,28 @@ function renderMovie(event) {
   let movieId = 0;
 
   if (event.type === "DOMContentLoaded") {
-    movieId = 1;
+    movieId;
   } else {
     movieId = event.target.id;
   }
 
   //destructing the object
-  let { title, release, genre, last, description, image } = parsedMovies[
-    movieId
-  ];
+  let {
+    title,
+    release,
+    genre,
+    last,
+    description,
+    folder,
+    image,
+  } = parsedMovies[movieId];
 
   //create the markUp
   const markUp = `
     <figure class="composition">
-      <img src="${image[0]}" alt="${title}" class="composition__photo composition__photo--p1">
-      <img src="${image[1]}" alt="${title}" class="composition__photo composition__photo--p2">
-      <img src="${image[2]}" alt="${title}" class="composition__photo composition__photo--p3">
+      <img src="./img/${folder}/${image[0]}" alt="${title}" class="composition__photo composition__photo--p1">
+      <img src="./img/${folder}/${image[1]}" alt="${title}" class="composition__photo composition__photo--p2">
+      <img src="./img/${folder}/${image[2]}" alt="${title}" class="composition__photo composition__photo--p3">
     </figure>
     <div class="description-movie">
       <div class="title">${title}</div>
