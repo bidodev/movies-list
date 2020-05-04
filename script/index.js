@@ -23,25 +23,18 @@ const renderMenuList = movie => {
 //render movie
 function renderMovie(event) {
   const movieId = event.target.id;
-  console.log(movieId);
 
   //destructing the object
-  let {
-    id,
-    title,
-    release,
-    genre,
-    last,
-    description,
-    actors,
-    image,
-  } = parsedMovies[movieId];
-  console.log(release);
+  let { title, release, genre, last, description, image } = parsedMovies[
+    movieId
+  ];
 
   //create the markUp
   const markUp = `
-    <figure class="poster">
-      <img src="${image}" alt="${title}">
+    <figure class="poster composition">
+      <img src="${image[0]}" alt="${title}" class="composition__photo composition__photo--p1">
+      <img src="${image[1]}" alt="${title}" class="composition__photo composition__photo--p2">
+      <img src="${image[2]}" alt="${title}" class="composition__photo composition__photo--p3">
     </figure>
     <div class="description-movie">
       <div class="title">${title}</div>
@@ -56,26 +49,8 @@ function renderMovie(event) {
   elements.description.innerHTML = markUp;
 }
 
+//for each film call the function render film
 parsedMovies.forEach(renderMenuList);
 
 //HANDLER EVENTS
 elements.moviesList.addEventListener("click", renderMovie);
-
-//Hover effect
-const items = document.querySelectorAll("li");
-
-function changeBackground() {
-  this.style.backgroundColor = "#7a2929";
-  this.style.color = "#f1f1f1";
-}
-
-function backToDefault() {
-  this.style.backgroundColor = "#e5e5e5";
-  this.style.color = "#181818";
-}
-
-//Event Listeners
-items.forEach(item => {
-  item.addEventListener("mouseover", changeBackground);
-  item.addEventListener("mouseout", backToDefault);
-});
